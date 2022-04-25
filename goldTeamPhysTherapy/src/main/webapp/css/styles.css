@@ -1,0 +1,417 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans';
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	background-color: #2d4b6b;
+	padding: 0 50px;
+}
+.header h1{
+	padding: 10px;
+	margin: 0;
+	color: #fff;
+}
+.header img{
+	padding: 13px 10px 7px 10px;
+	width: 40px;
+	height: 40px;
+}
+.main{
+	display: flex;
+	height: 150%;
+}
+.sidebar{
+	width: 220px;
+	background-color: #6d89a6;
+	font-size: 0.85em;
+	font-weight: 600;
+	letter-spacing: 1px;
+	min-height: 125vh;
+}
+.sidebar img{
+	display: block;
+	width: 125px;
+	margin: 30px auto;
+	border-radius: 200px;
+	border: 5px solid #cbe1f5;
+}
+.sideMenu{
+	text-transform: uppercase;
+	background-color: #6d89a6;
+}
+.sideMenu a{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	width: 200px;
+	padding: 10px;
+}
+.sideMenu a:hover, .active{
+	background-color: #cbe1f5;
+	color: #2d4b6b !important;
+}
+.menu{
+	padding: 40px 80px; 
+	display: block;
+}
+.menu hr{
+	width: 85%;
+	margin-left: 0;
+}
+.menu ul{
+	margin-bottom: 50px;
+}
+.menu ul li{
+	list-style-type: none;
+	display: inline-block;
+} 
+.menu button, .certMenu button, .empMenu button, #printSchedule{
+ 	border: none;
+	color: #fff;
+ 	background-color: #4b7db3;
+	padding: 10px 15px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 30px;
+  	margin: 5px;
+}
+form{
+	margin: 0;
+}
+.menu button:hover, .certMenu button:hover, .empMenu button:hover, #addButton:hover, #updateButton:hover, 
+#removeButton:hover, .searchButton:hover, #searchAppointmentButton:hover, #viewScheduleButton:hover,
+#cancelAddButton:hover, #cancelRemoveButton:hover, #cancelUpdateButton:hover, #cancelManageButton:hover,
+#manageScheduleButton:hover, #submitChangesBtn:hover, #cancelChangesBtn:hover{
+	box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+	transform: scale(1.05);
+}
+.certMain, .empMain, .appointmentMain, .scheduleMain{
+	text-align: center;
+	width: 85%;
+	padding: 0 40px;
+	margin: 0 auto;
+	min-height: 100vh;
+}
+.certList, .empList{
+	display: inline-block;
+	margin: 20px auto;
+	background-color: #cbe1f5;
+	padding: 20px;
+	text-align: left;
+}
+.certList th, .certList td, .empList th, .empList td{
+	padding: 0 15px;
+}
+.addCertification, .removeCertification, .updateCertification, .addEmployee, .removeEmployee, .updateEmployee, .manageEmpCert{
+	margin: 20px auto 0 auto;
+}
+.searchSchedule, .searchAppointment{
+	margin: 40px auto 10px auto;
+	font-size: 18px;
+}
+
+.addCertification label, .removeCertification label, .updateCertification label, .addEmployee label, .removeEmployee label, .updateEmployee label, label[for="fname"], label[for="lname"], label[for="pNumber"],label[for="email"], label[for="uname"], label[for="password"], label[for="notes"]{
+	display: inline-block;
+	width: 125px;
+	margin: 2px;
+	text-align: right;
+}
+label[for="empTypeDropdownU"], label[for="empDropdown"]{
+	margin-right: 0;
+}
+label[for="certCodesDropdown"]{
+	margin-right: -2px;
+}
+#certCodesDropdown{
+	width: 225px;
+	font-size: 16px;
+}
+.addCertification input,  .removeCertification input, .updateCertification input, .addEmployee input, .removeEmployee input, .updateEmployee input, #fname, #lname, #pNumber, #email, #notes{
+	display: inline-block;
+	width: 200px;
+}
+#notes{
+	vertical-align: top;
+	margin: 4px 0;
+}
+
+#addButton {
+	border: none;
+	color: #fff;
+	background-color: #4b7db3;
+	padding: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 30px;
+  	margin: 20px;
+	width: 75px !important;
+}
+#removeButton,#updateButton,#manageButton, #cancelAddButton, #cancelRemoveButton, #cancelUpdateButton, #cancelManageButton,
+#cancelChangesBtn{
+	border: none;
+	color: #fff;
+	background-color: #4b7db3;
+	padding: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 30px;
+  	margin: 20px;
+	width: 90px !important;	
+}
+
+.removeEmployee label[for="empDropdown"] {
+	width: 125px !important;
+}
+.removeCertification label[for="certCodesRemoveDropdown"]{
+	width: 150px !important;
+}
+.updateEmployee label[for="empDropdown"], label[for="empTypeDropdownU"], .removeEmployee label[for="empRemoveDropdown"], 
+label[for="empManage"], label[for="addCertDropDown"]{
+	width: 125px;
+	display: inline-block;
+	text-align: right;
+}
+#empTypeDropdownU, #empDropdown, #empRemoveDropdown, #empManage, #addCertDropDown, #certCodesRemoveDropdown{
+	width: 200px;
+	display: inline-block;
+	font-size: 16px;
+	margin-left: 2px;
+}
+#empTypeDropdown{
+	width: 200px;
+	font-size: 16px;
+}
+.addEmployee label[for="empTypeDropDown"]{
+	width: 125px !important;
+}
+#certUpdate, #therapyUpdate, #newCode, #newCert, #newTherapy{
+	width: 225px;
+}
+#searchAppointmentButton, #viewScheduleButton, #manageScheduleButton, #submitChangesBtn{
+	text-align: center;
+	border: none;
+	color: #fff;
+	background-color: #4b7db3;
+	padding: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 30px;
+  	margin: 20px;
+	margin-left: 40px;
+	width: 175px !important;
+}
+#therapyDropdown, #therapistDropdown{
+	margin-right: 40px;
+	font-size: 16px;
+}
+input, select{
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+#datepicker, #weekpicker, #daypicker{
+	margin-right: 5px;
+	font-size: 16px;
+}
+.appointmentList{
+	display: inline-block;
+	margin: auto;
+	text-align: left;
+	width: 700px;
+}
+.searchButton{
+	border: none;
+	color: #fff;
+	background-color: #4b7db3;
+	padding: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 30px;
+  	margin: 5px;
+	width: 75px !important;
+}
+.appointmentList td{
+	padding-right: 60px;
+	vertical-align: top;
+}
+.appointmentList th{
+	padding-right: 60px;
+	padding-bottom: 20px;
+}
+.form-popup{
+	display: none;
+	position: fixed;
+	top: 15%;
+	right: 30%;
+	z-index: 9;
+	text-align: center;
+}
+.form-container {
+	width: 500px;
+	padding: 10px;
+	background-color: white;
+	height: 100%;
+}
+.form-container .btn {
+	margin: 20px 5px;
+	font-size: 16px;
+	font-weight: 600;
+	background-color: #04AA6D;
+	color: white;
+	padding: 5px 10px;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+	border-radius: 30px;
+	display: inline-block;
+}
+
+.form-container .cancel {
+	background-color: red;
+}
+.form-container .btn:hover, .open-button:hover {
+	opacity: 1;
+}
+.overlay {
+     opacity: 0.7; 
+     position:absolute;
+     top:0px;
+     left:0px;
+     bottom: 0px;
+     right: 0px;
+     height: 160%;
+     width:100%;
+     background-color:grey;
+     z-index: 8;
+}
+.appDetailsTitle{
+	display: inline-block;
+	text-align: right;
+	font-weight: bold;
+	margin: auto;
+	width: 150px;
+}
+.confTitle{
+	display: block;
+	text-align: center;
+	font-weight: bold;
+}
+.appDetails{
+	display: inline-block;
+	text-align: left;
+	margin: auto;
+	width: 240px;
+}
+.weeklySchedule{
+	display: block;
+	margin: auto;
+	padding: 20px;
+}
+#scheduleTable{
+	max-width: 85%;
+	margin: auto;
+}
+#scheduleTable th, #scheduleTable td{
+	padding: 10px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 14%;
+	background-color: #cbe1f5;
+	text-align: center;
+}
+.available{
+	background-color: #ccfce4 !important;
+}
+.off{
+	background-color: lightgrey !important;
+}
+.booked{
+	background-color: #fccccc !important;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.disabled{
+	background-color: lightgrey !important;
+}
+.disabled:hover{
+	background-color: lightgrey !important;
+	box-shadow: none !important;
+	transform: none !important;
+}
+.btn-container{
+	display: flex;
+}
+.appForm{
+	display: inline-block;
+}
+label[for=appNotes]{
+	display: inline-block;
+	text-align: right;
+	width: 150px;
+}
+#appNotes{
+	width: 240px;
+	vertical-align: top;
+	margin: 4px 0;
+}
+#editAppButton, #saveChangesButton{
+	margin: 5px auto;
+	display: inline-block;
+} 
+#confBtnContainer{
+	margin-left: 150px;
+}
+.cards{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 35px;
+	justify-content: start;
+	padding-left: 20px;
+}
+.card{
+	width: 215px;
+	height: 215px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.cards a{
+	text-decoration: none;
+	color: black;
+	letter-spacing: 1px;
+}
+.card img{
+	display: block;
+	margin: auto;
+	height: 75px;
+	width: 75px;
+	padding-top: 40px;
+}
+.card p{
+	width: 215px;
+	text-align: center;
+	font-size: 1.15em;
+}
+.updateCerts, .updateEmployeeList{
+	margin: 40px auto 0 auto;
+}
+.manageScheduleDays{
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+.scheduleBox{
+	border: 1px solid black;
+	min-height: 210px;
+	min-width: 240px;
+}
+.time{
+	display: inline-block;
+	width: 85px !important;
+	text-align: right;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
